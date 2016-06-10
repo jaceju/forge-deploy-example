@@ -13,3 +13,11 @@ before_script:
   - php artisan key:generate
 script:
   - vendor/bin/phpunit
+before_install:
+  - openssl aes-256-cbc -K $encrypted_e4422d832ef6_key -iv $encrypted_e4422d832ef6_iv -in .travis/ssh.tar.enc -out ssh.tar -d
+  - tar xvf ssh.tar && rm -f ssh.tar
+  - mv ssh_config ~/.ssh/config
+  - mv ssh_key ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
