@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c284a9c122da36c99a8b6597bdce7aa6",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "ff2d883b551bb71463f9c369fc3f51b1",
+    "content-hash": "c4216b189663ac29bef9916ea28c0c52",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -160,6 +160,61 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "enrise/travisdeployer",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Enrise/TravisDeployer.git",
+                "reference": "c87d20c9a8cd16ea42c0d0af368c50ab016902bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Enrise/TravisDeployer/zipball/c87d20c9a8cd16ea42c0d0af368c50ab016902bd",
+                "reference": "c87d20c9a8cd16ea42c0d0af368c50ab016902bd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/yaml": "^2.7"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "bin": [
+                "script/travisdeployer"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Enrise\\TravisDeployer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU v3"
+            ],
+            "authors": [
+                {
+                    "name": "Rick van der Staaij",
+                    "homepage": "http://rickvanderstaaij.nl",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Stefan van Essen",
+                    "homepage": "http://stefan-van-essen.nl",
+                    "role": "developer"
+                }
+            ],
+            "description": "Combine Deployer with Travis-CI to automatically deploy when a branch gets merged.",
+            "homepage": "https://github.com/Enrise/TravisDeployer",
+            "keywords": [
+                "deployer",
+                "travis",
+                "travis-ci"
+            ],
+            "time": "2015-09-25 07:33:08"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1729,6 +1784,55 @@
             "time": "2016-05-24 10:03:10"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v2.8.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/815fabf3f48c7d1df345a69d1ad1a88f59757b34",
+                "reference": "815fabf3f48c7d1df345a69d1ad1a88f59757b34",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-06 11:11:27"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.2.1",
             "source": {
@@ -3050,55 +3154,6 @@
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
             "time": "2016-04-12 18:09:53"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "eca51b7b65eb9be6af88ad7cc91685f1556f5c9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca51b7b65eb9be6af88ad7cc91685f1556f5c9a",
-                "reference": "eca51b7b65eb9be6af88ad7cc91685f1556f5c9a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-05-26 21:46:24"
         },
         {
             "name": "webmozart/assert",
